@@ -15,3 +15,5 @@ if __name__ == "__main__":
 
     person = Unities("martin", 28, "martin@gmail.com", 11223322)
     person.info()
+    entry = input("ENTER YOUR NAME")
+    print(entry)
