@@ -1,7 +1,10 @@
 import math
 
 def index_power(array: list, n: int) -> int:
-    return int(math.pow(array[n],n))
+    if len(array) > n:
+        return int(math.pow(array[n],n))
+    else:
+        return -1
 
 
 
