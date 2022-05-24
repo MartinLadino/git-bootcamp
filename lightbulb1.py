@@ -5,8 +5,9 @@ from typing import List
 def sum_light(els: List[datetime]) -> int:
     lenght = len(els) - 1
 
-    while lenght:
-        totaltime += els[lenght] - els[lenght - 1]
+    while lenght > 0:
+        totaltime += abs(timedelta.total_seconds(els[lenght] - els[lenght - 1]))
+        lenght -= 2
 
     
 if __name__=='__main__':
