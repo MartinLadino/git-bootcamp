@@ -3,13 +3,12 @@ from datetime import timedelta
 from typing import List
 
 def sum_light(els: List[datetime]) -> int:
-    timebulb1 = els[0] - els[1]
-    timebul2 = els[2] - els[3]
+    lenght = len(els) - 1
 
-    totaltime = abs(timedelta.total_seconds(timebulb1)) + abs(timedelta.total_seconds(timebul2))
-    return totaltime
+    while lenght:
+        totaltime += els[lenght] - els[lenght - 1]
 
-
+    
 if __name__=='__main__':
     print(sum_light([
         datetime(2015, 1, 12, 10, 0 , 0),
