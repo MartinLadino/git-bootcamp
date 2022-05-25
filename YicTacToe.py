@@ -38,7 +38,7 @@ def checkio(game_result: List[str]) -> str:
     Diagonal = [game_result[0][0] + game_result[1][1] + game_result[2][2],
                 game_result[0][2] + game_result[1][1] + game_result[2][0]]
     
-    for x in vertical:
+    for x in Diagonal:
         if x.count('X') > 2:
             Xwin = True
         elif x.count('O') > 2:
