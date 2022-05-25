@@ -13,9 +13,29 @@ def checkio(game_result: List[str]) -> str:
             Xwin = True
         elif x.count('O') > 2:
             Owin = True
+
+    if Xwin and Owin:
+        return 'D'
+    elif Xwin:
+        return 'X'
+    elif Owin:
+        return 'O'
     
     Diagonal = [game_result[0][0] + game_result[1][1] + game_result[2][2],
                 game_result[0][2] + game_result[1][1] + game_result[2][0]]
+    
+    for x in vertical:
+        if x.count('X') > 2:
+            Xwin = True
+        elif x.count('O') > 2:
+            Owin = True
+            
+    if Xwin and Owin:
+        return 'D'
+    elif Xwin:
+        return 'X'
+    elif Owin:
+        return 'O'
         
 
 
