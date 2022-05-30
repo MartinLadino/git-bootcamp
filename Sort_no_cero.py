@@ -2,8 +2,11 @@ from typing import Iterable
 
 
 def except_zero(items: list) -> Iterable:
-    items.sort()
-    return items
+    out = list()
+    for item in items:
+        if item:
+            out.append(item)
+    return out
 
 if __name__ == '__main__':
     print("Example:")
