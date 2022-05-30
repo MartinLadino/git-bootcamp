@@ -6,6 +6,11 @@ def except_zero(items: list) -> Iterable:
     for item in items:
         if item:
             out.append(item)
+    
+    for num,item in enumerate(items):
+        if not item:
+            out.insert(num,item)
+    
     return out
 
 if __name__ == '__main__':
